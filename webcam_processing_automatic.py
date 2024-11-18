@@ -17,11 +17,9 @@ while True:
         break
 
     frame_resized = cv.resize(frame, (640, 480))
-
     frame_rgb = cv.cvtColor(frame_resized, cv.COLOR_BGR2RGB)
 
     results = selfie_segmentation.process(frame_rgb)
-
     fg_mask = results.segmentation_mask
 
     _, binary_mask = cv.threshold(fg_mask, 0.5, 255, cv.THRESH_BINARY)
