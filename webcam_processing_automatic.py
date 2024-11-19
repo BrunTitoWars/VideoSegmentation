@@ -27,8 +27,8 @@ while True:
 
     foreground = cv.bitwise_and(frame_resized, frame_resized, mask=binary_mask)
 
-    cv.imshow("Original Frame", frame_resized)
-    cv.imshow("Foreground Mask", binary_mask)
+    cv.imshow("Webcam", frame_resized)
+    cv.imshow("Máscara", binary_mask)
     cv.imshow("Isolated Foreground", foreground)
 
     if cv.waitKey(30) & 0xFF == ord('q'):
